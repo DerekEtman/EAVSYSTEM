@@ -1,15 +1,6 @@
-import React from "react";
-import {
-	Container,
-	Link,
-	Box,
-	Grid,
-	Icon,
-	SvgIcon,
-	IconButton,
-} from "@material-ui/core";
+import { Grid, IconButton } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-
+import React from "react";
 import "./header.scss";
 import logo_img from "./header_assets/font_logo_color.png";
 
@@ -27,9 +18,7 @@ export default function Header() {
 				/>
 			</Grid>
 
-			<Grid item className="header_nav_container" lg={4}>
-
-			</Grid>
+			<Grid item className="header_nav_container" lg={4}></Grid>
 		</Grid>
 	);
 }
