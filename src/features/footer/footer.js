@@ -1,5 +1,6 @@
-import { Container, Grid, Link } from "@material-ui/core";
 import React from "react";
+import { Container, Grid, Link } from "@material-ui/core";
+import "./footer.scss";
 
 export default function Footer() {
 	return (

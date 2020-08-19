@@ -1,0 +1,21 @@
+.footer_container{
+    display: flex;
+    margin: auto;
+
+    .footer_link_container{
+
+        margin:0 auto;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .footer_link{
+        padding: 0 1rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer_copyright{
+        text-align: center;
+        margin: 1rem auto;
+    }
+}
