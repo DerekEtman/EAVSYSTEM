@@ -1,5 +1,21 @@
+
+
+:root{
+    --splash_background:#19233d;
+}
+
 .splash_container{
-    border:1px solid black;
     min-height:80vh;
-    background-color: black;
+    background-color: var(--splash_background);
+    background-image: url(./splash_assets/temp_img.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0%;
+
+    .splash_welcome_card{
+        width:90%;
+
+        margin: 0 auto;
+        padding: 1rem;
+    }
 }

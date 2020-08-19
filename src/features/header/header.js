@@ -8,6 +8,9 @@ import "./header.scss";
 import logo_img from "./header_assets/font_logo_color.png";
 
 export default function Header() {
+
+	
+
 	return (
 		<Grid container className="header_container" spacing={0}>
 			<Grid item lg={4} className="header_left_container">
