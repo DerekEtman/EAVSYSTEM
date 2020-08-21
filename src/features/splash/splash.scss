@@ -8,9 +8,10 @@
     min-height:80vh;
     background-color: var(--splash_background);
     background-image: url(./splash_assets/temp_img.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0%;
+    background-position: 20% 50%;
+    font-family: 'Alata', sans-serif;
 
     .splash_welcome_card{
         width:90%;
