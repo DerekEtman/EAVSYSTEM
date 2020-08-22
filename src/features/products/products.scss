@@ -1,0 +1,19 @@
+.product_container{
+    min-height: 85vh;
+    
+    .product_left_box{
+        background-color: antiquewhite;
+        border:1px solid black;
+    }
+
+    .product_right_box{
+        background-color: aqua;
+        border:1px solid black;
+
+    }
+
+    .product_grid_item{
+        border:1px solid black;
+        margin:0 auto;
+    }
+}
