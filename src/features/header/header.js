@@ -20,6 +20,8 @@ import "./header.scss";
 import logo_img from "./header_assets/font_logo_color.png";
 import clsx from "clsx";
 
+import { Link as BrowserLink } from "react-router-dom";
+
 const useStyles = makeStyles({
 	list: {
 		width: 250,
@@ -42,8 +44,8 @@ export default function Header() {
 			return;
 		}
 
-		setIsDrawer(isDrawer => !isDrawer);
-		console.log({isDrawer});
+		setIsDrawer((isDrawer) => !isDrawer);
+		console.log({ isDrawer });
 	};
 
 	const list = (anchor) => (
@@ -56,9 +58,12 @@ export default function Header() {
 			onKeyDown={toggleDrawer(true)}
 		>
 			<List>
-				{["Menu_one","Menu_two"].map((text) => (
-					<ListItem button key={text}>
-						<ListItemText primary={text} > <Link>TEST</Link></ListItemText>
+				<ListItem button component={BrowserLink} to="/">
+					<ListItemText>Home</ListItemText>
+				</ListItem>
+				{["Category_1", "Category_2"].map((text) => (
+					<ListItem button component={BrowserLink} to="/Products" key={text}>
+						<ListItemText primary={text} secondary="test"> </ListItemText>
 					</ListItem>
 				))}
 			</List>
@@ -76,11 +81,13 @@ export default function Header() {
 						{list()}
 					</Drawer>
 				</IconButton>
-				<img
-					className="header_logo"
-					src={logo_img}
-					alt="Etman AV Systems logo, Click to return to homepage"
-				/>
+				<Button className="header_logo_button" component={BrowserLink} to="/">
+					<img
+						className="header_logo"
+						src={logo_img}
+						alt="Etman AV Systems logo, Click to return to homepage"
+					/>
+				</Button>
 			</Grid>
 
 			<Grid item lg={5} className="header_searchbar_container">
@@ -91,7 +98,15 @@ export default function Header() {
 			</Grid>
 
 			<Grid item className="header_right_container" lg={3}>
-				<Link className="header_right_element log_in"> Log In</Link>
+				<BrowserLink className="header_right_element log_in" to="/SignIn">
+					{" "}
+					Sign In
+				</BrowserLink>
+
+				<BrowserLink className="header_right_element log_in" to="/SignUp">
+					{" "}
+					Sign Up
+				</BrowserLink>
 				<SvgIcon className="header_right_element">
 					<ShoppingCartIcon />
 				</SvgIcon>

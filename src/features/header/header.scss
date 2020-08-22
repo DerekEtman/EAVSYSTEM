@@ -12,10 +12,14 @@
     align-content: center;
     margin:auto;
     font-family: 'Alata', sans-serif;
+    
+    .header_logo_button &:hover{
+        background-color: transparent;
+    }
 
     .header_logo{
         width:20vw;
-        margin:auto;
+        margin: 0 auto;
     }
 
     .header_searchbar_container{
