@@ -12,6 +12,7 @@ import {
 	ListItemText,
 	makeStyles,
 	Button,
+	Hidden,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
@@ -63,7 +64,9 @@ export default function Header() {
 				</ListItem>
 				{["Category_1", "Category_2"].map((text) => (
 					<ListItem button component={BrowserLink} to="/Products" key={text}>
-						<ListItemText primary={text} secondary="test"> </ListItemText>
+						<ListItemText primary={text} secondary="test">
+							{" "}
+						</ListItemText>
 					</ListItem>
 				))}
 			</List>
@@ -72,7 +75,7 @@ export default function Header() {
 
 	return (
 		<Grid container className="header_container" spacing={1}>
-			<Grid item lg={4} className="header_left_container">
+			<Grid item lg={4}  className="header_left_container">
 				<IconButton className="header_menu_button" edge="start">
 					<Button onClick={toggleDrawer(true)}>
 						<MenuIcon fontSize="large" />
@@ -90,27 +93,38 @@ export default function Header() {
 				</Button>
 			</Grid>
 
-			<Grid item lg={5} className="header_searchbar_container">
-				<Input autoFocus="true" placeholder="Search" fullWidth="true" />
-				<SvgIcon>
-					<SearchIcon />
-				</SvgIcon>
-			</Grid>
+			<Hidden smDown>
+				<Grid item md={5} className="header_searchbar_container">
+					<Input autoFocus="true" placeholder="Search" fullWidth="true" />
+					<SvgIcon>
+						<SearchIcon />
+					</SvgIcon>
+				</Grid>
+			</Hidden>
 
-			<Grid item className="header_right_container" lg={3}>
+			<Grid item className="header_right_container" lg={3} md={6}>
 				<BrowserLink className="header_right_element log_in" to="/SignIn">
 					{" "}
 					Sign In
 				</BrowserLink>
 
-				<BrowserLink className="header_right_element log_in" to="/SignUp">
+				{/* <BrowserLink className="header_right_element log_in" to="/SignUp">
 					{" "}
 					Sign Up
-				</BrowserLink>
+				</BrowserLink> */}
 				<SvgIcon className="header_right_element">
 					<ShoppingCartIcon />
 				</SvgIcon>
 			</Grid>
+
+			<Hidden mdUp>
+				<Grid item lg={12} className="header_searchbar_container">
+					<Input autoFocus="true" placeholder="Search" fullWidth="true" />
+					<SvgIcon>
+						<SearchIcon />
+					</SvgIcon>
+				</Grid>
+			</Hidden>
 		</Grid>
 	);
 }
