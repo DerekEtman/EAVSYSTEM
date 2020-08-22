@@ -1,6 +1,6 @@
+import { Grid, Hidden } from "@material-ui/core";
 import React from "react";
 import "./products.scss";
-import { Container, Box, Grid, Hidden } from "@material-ui/core";
 
 export default function Products() {
 	return (

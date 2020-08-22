@@ -1,27 +1,24 @@
-import React, { useState } from "react";
-
 import {
-	Grid,
-	IconButton,
-	SvgIcon,
-	Link,
-	Input,
+	Button,
 	Drawer,
+	Grid,
+	Hidden,
+	IconButton,
+	Input,
 	List,
 	ListItem,
 	ListItemText,
 	makeStyles,
-	Button,
-	Hidden,
+	SvgIcon,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import SearchIcon from "@material-ui/icons/Search";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import clsx from "clsx";
+import React, { useState } from "react";
+import { Link as BrowserLink } from "react-router-dom";
 import "./header.scss";
 import logo_img from "./header_assets/font_logo_color.png";
-import clsx from "clsx";
-
-import { Link as BrowserLink } from "react-router-dom";
 
 const useStyles = makeStyles({
 	list: {
@@ -75,7 +72,7 @@ export default function Header() {
 
 	return (
 		<Grid container className="header_container" spacing={1}>
-			<Grid item lg={4}  className="header_left_container">
+			<Grid item lg={4} className="header_left_container">
 				<IconButton className="header_menu_button" edge="start">
 					<Button onClick={toggleDrawer(true)}>
 						<MenuIcon fontSize="large" />
