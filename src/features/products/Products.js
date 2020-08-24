@@ -1,7 +1,7 @@
-import { Grid, Hidden, Paper } from "@material-ui/core";
+import { Grid, Hidden } from "@material-ui/core";
 import React from "react";
 import "./products.scss";
-import Product_List_Card from "./Product_List_Card";
+import ProductListCard from "./Product_List_Card";
 
 export default function Products() {
 	return (
@@ -15,7 +15,7 @@ export default function Products() {
 			<Grid item className="product_right_box" md={10} xs={12}>
 				<Grid container spacing={3} wrap="wrap">
 					<Grid item xs={12} className="product_grid_item">
-						<Product_List_Card />
+						<ProductListCard />
 					</Grid>
 					<Grid item xs={12} className="product_grid_item">
 						<h1>Box2</h1>
