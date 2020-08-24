@@ -7,10 +7,10 @@
 .header_container{
     border:1px solid black;
     padding: 1.5rem 0rem;
-    min-height: 10vh;
+    // min-height: 10vh;
     display: flex;
     align-content: center;
-    margin:auto;
+    margin: 0 auto;
     font-family: 'Alata', sans-serif;
     
     .header_logo_button &:hover{
