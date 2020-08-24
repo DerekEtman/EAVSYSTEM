@@ -71,7 +71,7 @@ export default function Header() {
 	);
 
 	return (
-		<Grid container className="header_container" spacing={1}>
+		<Grid container className="header_container" >
 			<Grid item lg={4} className="header_left_container">
 				<IconButton className="header_menu_button" edge="start">
 					<Button onClick={toggleDrawer(true)}>
