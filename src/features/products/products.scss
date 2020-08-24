@@ -1,5 +1,6 @@
 .product_container{
     min-height: 85vh;
+    padding: 1rem;
     
     .product_left_box{
         // background-color: antiquewhite;
@@ -15,5 +16,17 @@
     .product_grid_item{
         border-bottom: 1px solid black ;
         margin:0 auto;
+    }
+}
+
+
+.product_list_card{
+
+    .product_list_info{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        /* flex-basis: auto; */
+        // align-items: center;
     }
 }

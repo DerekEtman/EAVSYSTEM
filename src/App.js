@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.scss";
-import Header from "./features/header/Header";
-import Splash from "./features/splash/Splash";
-import Footer from "./features/footer/Footer";
+import Header from "./features/header/Header.js";
+import Splash from "./features/splash/Splash.js";
+import Footer from "./features/footer/Footer.js";
 import { Switch, Route } from "react-router-dom";
 import Products from "./features/products/Products";
 import SignIn from "./features/sign_in_sign_up/SignIn";
