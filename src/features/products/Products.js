@@ -8,8 +8,8 @@ export default function Products() {
 		<Grid container className="product_container" spacing={3}>
 			<Hidden smDown>
 				<Grid item className="product_left_box" md={2}>
-					{" "}
-					TEST ONE
+					<h2> SubMenu</h2>
+					<h2> FilteringMenu</h2>
 				</Grid>
 			</Hidden>
 			<Grid item className="product_right_box" md={10} xs={12}>
