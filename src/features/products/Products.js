@@ -1,10 +1,7 @@
 import { Grid, Hidden } from "@material-ui/core";
 import React from "react";
 import "./products.scss";
-import Product_List_Card from "./Product_List_Card";
-import Product_Detail from "./Product_Detail";
-import { Route, Router } from "react-router-dom";
-import history from "../tools/history";
+import ProductListCard from "./Product_List_Card";
 
 // require("history").createBrowserHistory
 
@@ -23,7 +20,7 @@ export default function Products() {
 			<Grid item className="product_right_box" md={10} xs={12}>
 				<Grid container spacing={3} wrap="wrap">
 					<Grid item xs={12} className="product_grid_item">
-					<Product_List_Card />
+					<ProductListCard />
 					</Grid>
 				</Grid>
 			</Grid>
