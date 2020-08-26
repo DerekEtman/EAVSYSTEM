@@ -1,3 +1,9 @@
+:root{
+    --splash_background:#19233d;
+    --light_blue: #37a5bf;
+}
+
+
 .product_container{
     min-height: 85vh;
     padding: 1rem;
@@ -33,6 +39,29 @@
         margin:auto;
         padding: .7rem;
     }
+}
 
+
+
+
+.product_detail_container{
+
+
+    .product_detail_image_container{
+        padding: 2rem 0 ;
+    }
+    .product_detail_menu{
+    background-color: var(--splash_background);
+    }
+
+    .product_detail_info_container{
+        padding: 2rem 0;
+    }
+
+    .product_detail_serial_group{
+        display:flex;
+        flex-flow: row wrap;
+        padding: 1px auto;
+    }
 
 }
