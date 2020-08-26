@@ -59,11 +59,9 @@ export default function Header() {
 				<ListItem button component={BrowserLink} to="/">
 					<ListItemText>Home</ListItemText>
 				</ListItem>
-				{["Category_1", "Category_2"].map((text) => (
+				{["Products"].map((text) => (
 					<ListItem button component={BrowserLink} to="/Products" key={text}>
-						<ListItemText primary={text} secondary="test">
-							{" "}
-						</ListItemText>
+						<ListItemText primary={text} secondary="Will Generate" />
 					</ListItem>
 				))}
 			</List>
